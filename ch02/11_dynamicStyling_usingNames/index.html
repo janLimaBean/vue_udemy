@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+        <div 
+            class="demo"
+            @click="attachRed = !attachRed"
+            :class="{red:attachRed, blue:!attachRed}"></div>
+        <!--Note the new use of the js object as a class that does the same as above-->
+        <div class="demo" :class="divClasses"></div>
+        <div class="demo" :class="color"></div>
+        <!--Note we can also assign an array of classes and vue will incorporate them into one applied class-->
+        <div class="demo" :class="[color, {red:attachRed}]"></div>
+        <hr>
+        <!--Now we can type in one of the names of our css values and this will applied to the third block-->
+        <input type="text" v-model="color">
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

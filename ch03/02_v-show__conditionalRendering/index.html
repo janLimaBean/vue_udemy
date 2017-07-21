@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+    <!-- 1. v-if will only render element if property i.e boolean is true-->
+        <!--note this will remove/add this to the html-->
+        <p v-if="show">You can see me! <span>Hello!</span></p>
+        <p v-else>Now you see me!</p>
+    <!-- 2. note how templates make more sense now because you can group elements in a template for rendering-->
+        <template v-if="show">
+            <h1>Heading</h1>
+            <p>Inside a template</p>
+        </template>
+    <!-- 3. v-show will only hide elements in html and not remove them like v-if-->
+        <p v-show="show">Do you also see me?</p>
+        <!--note clever ! operator used as a switch-->
+        <button @click="show = !show">Switch</button>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

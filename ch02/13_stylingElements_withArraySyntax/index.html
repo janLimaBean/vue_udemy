@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+        <div class="demo" :style="{backgroundColor: color}"></div>
+        <div class="demo" :style="myStyle"></div>
+        <!--attempting to correct the width and height to create a square-->
+        <div class="demo" :style="[myStyle,{height:width + 'px'}]"></div>
+        <div class="demo"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <input type="text" v-model="width">
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+
+        <h3>Looping through arrays with foreach</h3>
+        <ul>
+<!-- 1. v-for will loop through arrays and display then on the DOM (foreach loop)-->
+            <li v-for="ingredient in ingredients">{{ingredient}}</li>
+<!-- 2. Getting index with the array-->
+            <li v-for="(ingredient,i) in ingredients">{{ingredient}} index:{{i}}</li>
+        </ul>
+        <hr>
+
+<!-- 3. Note how template makes more sense now-->
+        <h3>Looping through arrays with foreach within a template</h3>
+        <template v-for="(ingredient,i) in ingredients">
+            <h3>{{ ingredient }}</h3>
+            <p>Index:{{ i }}</p>
+        </template>
+        <hr>
+
+<!--4. looping through objects-->
+        <h3>Looping through objects with foreach</h3>
+        <ul>
+            <li v-for="person in persons">{{person.name}}</li>
+        </ul>
+        <hr>
+<!--5. looping through objects properties-->
+        <h3>Looping through object properties with foreach</h3>
+        <ul>
+            <li v-for="person in persons">
+                <!--Note we can loop through multiple nested properties-->
+                <!--Note we can also get the key for each value-->
+                <div v-for="(value, key) in person">{{ key }} : {{ value }}</div>
+            </li>
+        </ul>
+        <hr>
+<!--6. looping through objects properties with index of object properties-->
+        <h3>Looping through object properties and property indexes with foreach</h3>
+        <ul>
+            <li v-for="person in persons">
+                <!--Adding a third arguement we are able to get the index value of the property in the object -->
+                <div v-for="(value, key, index) in person">{{ key }} : {{ value }} {{ index }}</div>
+            </li>
+        </ul>
+        <hr>
+<!--7. looping through a given number as with a for loop -->
+        <h3>Looping with for</h3>
+        <ul>
+            <li v-for="n in 5">{{ n }}</li>
+        </ul>
+        <hr>
+
+<!-- 8. When Vue is updating a list of elements rendered with v-for, it by default uses an “in-place patch” strategy. If the order of the data items has changed, instead of moving the DOM elements to match the order of the items, Vue will simply patch each element in-place and make sure it reflects what should be rendered at that particular index.
+
+This default mode is efficient, but only suitable when your list render output does not rely on child component state or temporary DOM state (e.g. form input values).
+To give Vue a hint so that it can track each node’s identity, and thus reuse and reorder existing elements, you need to provide a unique key attribute for each item. An ideal value for key would be the unique id of each item. You need to use v-bind to bind it to dynamic values (using shorthand here):-->
+        <h3>Adding data to array while keeping a ref point of each element</h3>
+        <ul>
+            <li v-for="(ingredient,i) in ingredients" :key="ingredient">{{ingredient}} index:{{i}}</li>
+        </ul>
+        <button @click="ingredients.push('spices')">Add Some Spices</button>
+
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

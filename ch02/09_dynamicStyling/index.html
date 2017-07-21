@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 1. Note how we can switch between true and false with exlamation operator -->
+        <!-- 2. Binding a new class-->
+        <!-- 3. Setting class arguments inside js object where first arg is key of css class and second arg is bool-->
+
+        <!--Thus depending on the bool value the class will be applied-->
+        <div 
+            class="demo"
+            @click="attachRed = !attachRed"
+            :class="{red:attachRed}"></div>
+        <div class="demo"></div>
+        <div class="demo"></div>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+        <!--<a v-bind:href="link">Google</a>-->
+        <!-- Shorthand for v-on:-->
+        <a :href="link">Google</a><br>
+        <button v-on:click="counter++">Increase</button>    
+        <!-- Shorthand for v-on:-->
+        <button @click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Increase Second</button>
+        <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+        <p>Result: {{ result() }} | {{ output }}</p>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

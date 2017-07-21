@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <!--important to understand is 1. vue use below html in the vue instance template 2. vue process the html in the template
+    and renders the html to the DOM-->
+    <div id="app">
+        <p>{{ sayHello() }}</p>
+        
+        <!--we cant use vuejs interpolation on any html tag attribute-->
+        <!--<p><a href="{{link}}">Google</a></p>-->
+
+        <!--use vbind directive(instruction used by vue) to overwrite default vue interpolation - note no curly braces-->
+        <p><a v-bind:href="link">Google</a></p>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

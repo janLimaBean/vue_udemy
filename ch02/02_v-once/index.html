@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+    <!--locks first available vuejs prop value-->
+        <h1 v-once>{{title}}</h1>
+
+    <!--above h1 did not change-->
+        <p>{{ sayHello() }}</p>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

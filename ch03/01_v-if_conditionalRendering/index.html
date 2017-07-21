@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+    <!-- 1. v-if will render an element based on a condition in this case a boolean.
+      Important to understand that v-if removes/adds elements to the DOM and does not hide it -->
+        <p v-if="show">V-if showing</p>
+        <p v-else>V-else showing</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eius inventore autem at deleniti repellat omnis itaque, dolor placeat esse libero, dolorem veniam soluta ea aliquam repudiandae a nobis quidem!</p>
+
+    <!-- 2. You can also use template element tags instead of divs to group v-if nested v-if elements. Element templates are not rendered by name element to the html body. Inspect this element to see the effect-->
+        <template v-if="show">
+            <hr>
+            <h3>Template v-if Heading</h3>
+            <p>Template paragraph</p>
+        </template>
+    <!--3. V-show will assign the display none css value to this template and will not remove it from the DOM-->
+        <!--Note does not work on a template element-->
+        <p v-show="show">Only hide this paragraph and dont remove from DOM</p>
+        
+        <button @click="show = !show">Switch</button>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

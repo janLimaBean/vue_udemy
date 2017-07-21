@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+    <!--locks first available vuejs prop value-->
+        <h1 v-once>{{title}}</h1>
+
+    <!--above h1 did not change-->
+        <p>{{sayHello()}}</p>
+        
+    <!--by default vue escapes html and only renders strings-->
+        <h5>Html vue output</h5>
+    <!--use v-html directive to render html-->
+        <p v-html="finishedLink"></p>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

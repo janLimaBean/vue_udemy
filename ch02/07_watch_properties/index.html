@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="counter++">Increase</button>    
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Increase Second</button>
+        <p>Counter: {{ counter }} | {{ secondCounter }}</p>
+        <!--Note difference between result() and output. No parenthesis because we use it as a property-->
+        
+        <!--The difference is that computed properties are cached based on their dependencies. A computed property will only re-evaluate when some of its dependencies have changed. This means as long as counter has not changed, multiple access to the output computed property will immediately return the previously computed result without having to run the function again.-->
+        <p>Result: {{ result() }} | {{ output }}</p>
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>

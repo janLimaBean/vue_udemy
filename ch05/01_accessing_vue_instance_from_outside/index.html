@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='../_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+    <div id="app1">
+    <h1 ref="heading">{{ title }}</h1>
+    <!--Can use the ref keyword(not a directive) used in normal js $refs to:
+        1. add a reference point in the dom to the value after rendered.
+        2. Get current DOM value for the button and manipulate it in vue / see vm1 -->
+    <button v-on:click="show" ref="myButton">Show Paragraph</button>
+    <p v-if="showParagraph">This is not always visible</p>
+    </div>
+
+    <div id="app2">
+    <h1>{{ title }}</h1>
+    <button @click="onChange">Change something in Vue 1</button>
+    </div>
+
+    <div id="app3">
+    
+    </div>
+<script src='assets/main.js'></script>
+</body>
+</html>
