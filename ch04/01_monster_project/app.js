@@ -46,7 +46,7 @@ new Vue({
 			this.humanHealth = this.humanHealth + 10;
 			this.humanHealth = this.humanHealth - monsterAttackAfterHeal
 
-			this.logData.unshift({"humanHeal" : 10 , "monster" : monsterAttackAfterHeal});
+			this.logData.unshift({"human" : 10 , "monster" : monsterAttackAfterHeal});
 		},
 		reset:function(){
 			this.humanHealth = 100;
