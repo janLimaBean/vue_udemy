@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <hr>
+
+    <!-- 2. Problem one - even while we are using a template we only created one vue instance and this will be replaced by the first captured element. Even using a class instead of an id result will be the same -->
+    <div id="app">
+    <!-- 3. Thus we need to create a component the extends the vue instance -->
+    </div>
+
+    <div id="app3">
+        <!-- 5. Now we are adding the component to the el -->
+        <my-custom-tagname></my-custom-tagname>
+        <my-custom-tagname></my-custom-tagname>
+    </div>
+
+<script src='assets/main.js'></script>
+</body>
+</html>

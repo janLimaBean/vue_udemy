@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src='_vue_source/vue.js'></script>
+    <link rel="stylesheet" href="assets/main.css">
+    <title>Vuejs</title>
+</head>
+<body>
+
+    <div id="app">
+        <my-custom-tagname></my-custom-tagname>
+        <my-custom-tagname></my-custom-tagname>
+    </div>
+    
+    <hr>
+
+    <div id="app2">
+        <!-- 5. Global component can be assigned to any vue instance -->
+        <my-global-tagname></my-global-tagname>
+    </div>
+
+    <div id="app3">
+        <!-- 4. Vue will break here becase the component is only registered for #app -->
+         <my-custom-tagname></my-custom-tagname> 
+    </div>
+
+<script src='assets/main.js'></script>
+</body>
+</html>
