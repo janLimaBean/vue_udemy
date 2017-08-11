@@ -17,7 +17,7 @@
 
 <script>
     import List from './List.vue'
-    // 1. See List.vue how to replace below code
+    // 1. NBNB - Global mixins are added to every comp - see main.js
     export default {
         data() {
             return {

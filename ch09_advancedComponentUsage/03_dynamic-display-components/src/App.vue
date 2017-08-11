@@ -10,14 +10,14 @@
             <p>Selected Component: {{ selectedComponent }}</p>
 
             <!-- 5. To override point 4's default behavior to destroy a component wrap your dynamic component in the reserved keep-alive tagname --> 
-            <keep-alive>
+          
                 <!-- 3. Using the component reserved keyword with the :is directive bind to the data prop selectedComponent. This will dynamically assign the correct component -->
                 <component :is="selectedComponent">
                     <h2 slot="title">{{ quote }}</h2>
                     <p slot="content">A wonderfull quote</p>
                     <em>Some default slot content</em>
                 </component>
-            </keep-alive>
+          
             
             </div>
         </div>
